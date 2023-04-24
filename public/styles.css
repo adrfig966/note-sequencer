@@ -1,7 +1,17 @@
+@import '../src/sass/tailwind.scss';
 @import '../src/sass/sequenceboard.scss';
+
+/* Pallette */
+/* https://coolors.co/palette/463f3a-8a817c-bcb8b1-f4f3ee-e0afa0 */
+
+/* Pallette 2 */
+/* https://coolors.co/palette/ffcdb2-ffb4a2-e5989b-b5838d-6d6875 */
+
+/* Pallette 3 */
+/* https://coolors.co/palette/37123c-71677c-a99f96-dda77b-945d5e */
 
 @font-face {
     font-family: raleway-regular;
-    src: url('../src/fonts/Raleway-Regular.ttf');
+    src: url('../src/fonts/Rajdhani-Regular.ttf');
 }
   

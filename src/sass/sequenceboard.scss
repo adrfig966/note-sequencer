@@ -1,37 +1,77 @@
+html,
 body {
-    @apply bg-orange-200 p-0 m-0;
+    height: 100%;
+}
+
+body {
+    @apply bg-primary p-0 m-0;
 
     font-family: 'raleway-regular', sans-serif;
 }
 
+.button {
+    @apply bg-quinary text-white p-2 rounded-lg border-0;
+
+    font-family: 'raleway-regular', sans-serif;
+
+    &:hover {
+        @apply bg-quinary;
+    }
+}
+
+.knob-label {
+    @apply text-quinary font-bold text-center mb-2;
+}
+
+.knob-value {
+    @apply text-center mt-2;
+}
+
+.knob {
+    @apply rounded-full bg-quinary;
+
+    width: 50px;
+    height: 50px;
+
+    &::after {
+        @apply bg-white absolute;
+
+        content: '';
+        width: 6px;
+        height: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.knob-board {
+    @apply flex justify-center items-center;
+
+    .knob-container + .knob-container {
+        @apply ml-4;
+    }
+}
+
 .sequence-board {
-    @apply p-4 bg-amber-100 mx-auto;
+    @apply p-4 bg-tertiary mx-auto rounded;
 
     max-width: 1000px;
 
     .controls {
-        @apply flex justify-between items-center mb-4;
-
-        button {
-            @apply bg-amber-200 p-2 rounded;
-
-            &:hover {
-                @apply bg-amber-300;
-            }
-        }
+        @apply flex justify-between items-center mb-4 px-2;
     }
 
     .note-sequence {
         @apply flex justify-center py-2;
 
         .note {
-            @apply py-4 px-1 flex-1 text-center rounded-lg border-4 border-solid border-sky-200 mx-2 select-none cursor-pointer;
+            @apply py-4 px-1 flex-1 text-center rounded-lg border-4 border-solid border-quinary mx-2 select-none cursor-pointer;
 
             transition: all 0.2s ease-in-out;
 
             &:hover,
             &.active {
-                @apply bg-sky-200;
+                @apply bg-quinary text-white;
             }
         }
     }
